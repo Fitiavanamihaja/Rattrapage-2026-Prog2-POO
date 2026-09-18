@@ -45,12 +45,12 @@ class CommandeTest {
         commande.ajouterVetement(tshirt, 2);
         commande.ajouterVetement(jean, 1);
 
-        assertEquals(90.0, commande.getMontantTotal(), 0.001);
+        assertEquals(90.0, commande.coutTotal(), 0.001);
     }
 
 
     @Test
-    void getMontantTotal_commandeVide_doitRetournerZero() {
+    void coutTotal_commandeVide_doitRetournerZero() {
         Client client = new Client(
                 "Martin",
                 "Sophie",
@@ -66,6 +66,6 @@ class CommandeTest {
                 client
         );
 
-        assertEquals(0.0, commande.getMontantTotal(), 0.001);
+        assertEquals(0.0, commande.coutTotal(), 0.001);
     }
 }

@@ -23,7 +23,7 @@ public class Commande {
         lignes.add(new LigneCommande(vetement, quantite));
     }
 
-    public double getMontantTotal() {
+    public double coutTotal() {
         double total = 0.0;
 
         for (LigneCommande ligne : lignes) {
